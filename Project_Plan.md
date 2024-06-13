@@ -183,6 +183,7 @@
 - `Notifications.tsx`: 알림 모달 컴포넌트, 도서 추가, 리뷰에 대한 좋아요/댓글 알림 표시
 - `Home.tsx`: 메인 홈 페이지 컴포넌트, 최신 리뷰 섹션, 인기 도서 섹션, 검색 바, 카테고리 필터 포함
 - `BookDetail.tsx`: 도서 상세 페이지 컴포넌트, 도서 정보, 리뷰 리스트, 리뷰 작성 폼 포함
+- `BookListItem.tsx` : 책 목록에서 각 책의 정보를 표시하는데 사용, 책 제목, 저자, 요약 등 다양산 속성을 하나의 리스트 아이템으로 랜더링
 - `Login.tsx`: 로그인 페이지 컴포넌트, 이메일과 비밀번호로 로그인, 소셜 로그인 버튼 포함
 - `Signup.tsx`: 회원가입 페이지 컴포넌트, 이메일, 비밀번호, 닉네임 입력 폼 및 유효성 검사 포함
 - `Profile.tsx`: 프로필 페이지 컴포넌트, 사용자 정보 보기 및 수정 기능 포함
@@ -209,6 +210,7 @@
     LatestReviews.tsx
     PopularBooks.tsx
     Notifications.tsx
+    BookListItem.tsx 
   /features
     /books
       booksSlice.ts
