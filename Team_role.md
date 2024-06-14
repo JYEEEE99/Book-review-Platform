@@ -83,7 +83,7 @@
  5. ``Profile.tsx`` - 2일
  6. ``Favorites.tsx`` - 2일
 
-## 먼저 개발 끝난 프론트엔드 개발자 
+#### 먼저 개발 끝난 프론트엔드 개발자 
  ``LanguageSettings.tsx``
 
 
