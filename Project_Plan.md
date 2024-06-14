@@ -220,29 +220,72 @@
 ```plaintext
 /src
   /components
-    Header.tsx
-    Footer.tsx
-    BookCard.tsx
-    SearchBar.tsx
-    CategoryFilter.tsx
-    LatestReviews.tsx
-    PopularBooks.tsx
-    Notifications.tsx
-    BookListItem.tsx 
+    /Header
+      Header.tsx
+      Header.styles.ts
+    /Footer
+      Footer.tsx
+      Footer.styles.ts
+    /BookCard
+      BookCard.tsx
+      BookCard.styles.ts
+    /SearchBar
+      SearchBar.tsx
+      SearchBar.styles.ts
+    /CategoryFilter
+      CategoryFilter.tsx
+      CategoryFilter.styles.ts
+    /LatestReviews
+      LatestReviews.tsx
+      LatestReviews.styles.ts
+    /PopularBooks
+      PopularBooks.tsx
+      PopularBooks.styles.ts
+    /Notifications
+      Notifications.tsx
+      Notifications.styles.ts
+    /BookListItem
+      BookListItem.tsx
+      BookListItem.styles.ts
   /features
+    /auth
+      authSlice.ts
     /books
       booksSlice.ts
     /reviews
       reviewsSlice.ts
+    /notifications
+      notificationsSlice.ts
+  /api
+    /auth
+      signupApi.ts
+      loginApi.ts
+      profileApi.ts
+      socialLoginApi.ts
+    /books
+      fetchBooksApi.ts
+      fetchBookDetailApi.ts
+      addBookApi.ts
+      updateBookApi.ts
+      deleteBookApi.ts
+    /reviews
+      addReviewApi.ts
+      updateReviewApi.ts
+      deleteReviewApi.ts
+      likeReviewApi.ts
+      dislikeReviewApi.ts
+    /notifications
+      fetchNotificationsApi.ts
+      addNotificationApi.ts
   /pages
     Home.tsx
-    BookDetail.tsx
     BookList.tsx
-    Login.tsx
-    Signup.tsx
-    Profile.tsx
+    BookDetail.tsx
     ReviewManagement.tsx
-    BookManagement.tsx
+    NotificationsPage.tsx
+    Signup.tsx
+    Login.tsx
+    Profile.tsx
     Favorites.tsx
     LanguageSettings.tsx
     ErrorPage404.tsx
@@ -251,8 +294,6 @@
     store.ts
   /styles
     GlobalStyle.ts
-  /utils
-    api.ts
   index.tsx
   App.tsx
 
