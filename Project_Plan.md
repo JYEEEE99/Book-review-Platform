@@ -190,32 +190,63 @@
 
 ---
 
-## 컴포넌트별 기능 설명
-- `Header.tsx`: 상단 네비게이션 바, 로그인 상태 표시, 주요 페이지 링크 제공
-- `Footer.tsx`: 하단 정보 표시, 회사 정보 및 소셜 미디어 링크 제공
-- `BookCard.tsx`: 도서 카드 컴포넌트, 도서 제목, 저자, 평점 등 간단한 정보 표시
-- `SearchBar.tsx`: 도서 검색 기능, 입력 필드 및 검색 버튼 포함
-- `CategoryFilter.tsx`: 도서 카테고리 필터링 기능, 선택된 카테고리에 따라 도서 목록 갱신
-- `LatestReviews.tsx`: 최신 리뷰 섹션, 슬라이드 형식으로 최근 리뷰 표시
-- `PopularBooks.tsx`: 인기 도서 섹션, 슬라이드 형식으로 인기 도서 표시
-- `Notifications.tsx`: 알림 모달 컴포넌트, 도서 추가, 리뷰에 대한 좋아요/댓글 알림 표시
-- `Home.tsx`: 메인 홈 페이지 컴포넌트, 최신 리뷰 섹션, 인기 도서 섹션, 검색 바, 카테고리 필터 포함
-- `BookDetail.tsx`: 도서 상세 페이지 컴포넌트, 도서 정보, 리뷰 리스트, 리뷰 작성 폼 포함
-- `BookListItem.tsx` : 책 목록에서 각 책의 정보를 표시하는데 사용, 책 제목, 저자, 요약 등 다양산 속성을 하나의 리스트 아이템으로 랜더링
-- `Login.tsx`: 로그인 페이지 컴포넌트, 이메일과 비밀번호로 로그인, 소셜 로그인 버튼 포함
-- `Signup.tsx`: 회원가입 페이지 컴포넌트, 이메일, 비밀번호, 닉네임 입력 폼 및 유효성 검사 포함
-- `Profile.tsx`: 프로필 페이지 컴포넌트, 사용자 정보 보기 및 수정 기능 포함
-- `ReviewManagement.tsx`: 리뷰 작성 및 관리 페이지 컴포넌트, 작성한 리뷰 목록, 리뷰 수정 및 삭제 기능 포함
-- `BookManagement.tsx`: 도서 관리 페이지 컴포넌트, 도서 추가, 수정, 삭제 기능 포함
-- `Favorites.tsx`: 즐겨찾기 페이지 컴포넌트, 즐겨찾기에 추가한 도서 및 리뷰 목록 표시
-- `LanguageSettings.tsx`: 다국어 지원 설정 페이지 컴포넌트, 사용자 인터페이스 언어 설정 기능 포함
-- `store.ts`: Redux 스토어 설정 및 전역 상태 관리
-- `GlobalStyle.ts`: 글로벌 스타일 정의 및 스타일링
-- `api.ts`: API 호출 유틸리티 함수 정의
+## 프로젝트 예상 구조 및 각 폴더의 역할
 
----
+### components폴더: 재사용 가능한 UI 컴포넌트들을 저장
+- **각 컴포넌트 폴더**
+  - ``tsx`` 파일: 컴포넌트의 React 코드
+  - ``styles.ts`` 파일: 해당 컴포넌트의 스타일 정의 (styled-components 사용)
 
-## 프로젝트 예상 구조
+### features폴더: 특정 기능과 관련된 상태 관리를 포함한 로직을 관리
+- **auth**: 사용자 인증 관련 상태 관리 ``authSlice.ts``
+- **books**: 도서 관련 상태 관리 ``booksSlice.ts``
+- **reviews**: 리뷰 관련 상태 관리 ``reviewsSlice.ts`
+- **notifications**: 알림 관련 상태 관리 ``notificationsSlice.ts``
+
+### api폴더: 각 기능별 API 호출을 관리
+
+#### auth폴더
+  - ``signupApi.ts``: 회원가입 API
+  - ``loginApi.ts``: 로그인 API
+  - ``profileApi.ts``: 프로필 조회 및 수정 API
+  - ``socialLoginApi.ts``: 소셜 로그인 API
+
+#### books폴더
+  - ``deleteBookApi.ts``: 도서 삭제 API
+  - ``fetchBooksApi.ts``: 도서 목록 조회 API
+  - ``fetchBookDetailApi.ts``: 도서 상세 정보 조회 API
+  - ``addBookApi.ts``: 도서 추가 API
+  - ``updateBookApi.ts``: 도서 수정 API
+  - ``deleteBookApi.ts``: 도서 삭제 API
+
+#### reviews폴더
+  - ``addReviewApi.ts``: 리뷰 작성 API
+  - ``updateReviewApi.ts``: 리뷰 수정 API
+  - ``deleteReviewApi.ts``: 리뷰 삭제 API
+  - ``likeReviewApi.ts``: 리뷰 좋아요 API
+  - ``dislikeReviewApi.ts``: 리뷰 싫어요 API
+
+#### notifications폴더
+  - ``fetchNotificationsApi.ts``: 알림 조회 API
+  - ``addNotificationApi.ts``: 알림 추가 API
+  
+  
+## pages폴더: 라우팅되는 주요 페이지들을 저장
+  - ``Home.tsx``: 홈 페이지, 최신 리뷰 섹션, 인기 도서 섹션, 검색 바, 카테고리 필터, 도서 리스트 포함
+  - ``BookList.tsx`: 도서 목록 페이지, 카테고리 필터, 검색 바, 도서 리스트 포함
+  - ``BookDetail.tsx`: 도서 상세 정보 페이지, 도서 정보, 리뷰 리스트, 리뷰 작성 폼 포함
+  - ``ReviewManagement.tsx``: 리뷰 작성 및 관리 페이지, 작성한 리뷰 목록, 리뷰 수정 및 삭제 포함
+  - ``NotificationsPage.tsx``: 알림 페이지, 도서 추가, 리뷰에 대한 좋아요/댓글 알림 표시
+  - ``Signup.tsx``: 회원가입 페이지, 이메일, 비밀번호, 닉네임 입력 폼 및 유효성 검사 포함
+  - ``Login.tsx``: 로그인 페이지, 이메일과 비밀번호로 로그인, 소셜 로그인 버튼 포함
+  - ``Profile.tsx``: 프로필 페이지, 사용자 정보 보기 및 수정 기능 포함
+  - ``Favorites.tsx``: 즐겨찾기 페이지, 즐겨찾기에 추가한 도서 및 리뷰 목록 표시
+  - ``LanguageSettings.tsx``: 다국어 지원 설정 페이지, 사용자 인터페이스 언어 설정 기능 포함
+  - ``ErrorPage404.tsx``: 404 Not Found 페이지, 사용자가 존재하지 않는 페이지를 요청했을 때 보여주는 페이지
+  - ``ErrorPage500.tsx``: 500 Internal Server Error 페이지, 서버에서 예기치 않은 오류가 발생했을 때 사용자에게 알리는 페이지
+
+## ``store.ts``: Redux 스토어 설정 및 전역 상태 관리
+
 
 ```plaintext
 /src
@@ -297,7 +328,10 @@
   index.tsx
   App.tsx
 
-  ---
-  
+
+---
+
+
+
 
   
