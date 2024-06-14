@@ -205,6 +205,7 @@
 
 ### api폴더: 각 기능별 API 호출을 관리
 
+
 #### auth폴더
   - ``signupApi.ts``: 회원가입 API
   - ``loginApi.ts``: 로그인 API
