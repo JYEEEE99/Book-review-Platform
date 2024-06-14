@@ -79,9 +79,9 @@
  1. ``SearchBar.tsx`` - 2일
  2. ``CategoryFilter.tsx`` - 2일
  3. ``Signup.tsx`` - 5일
- 4. ``Login.tsx``- 3일
- 5. ``Profile.tsx`` - 3일
- 6. ``Favorites.tsx`` - 3일
+ 4. ``Login.tsx``- 1일
+ 5. ``Profile.tsx`` - 2일
+ 6. ``Favorites.tsx`` - 2일
 
 ## 먼저 개발 끝난 프론트엔드 개발자 
  ``LanguageSettings.tsx``
