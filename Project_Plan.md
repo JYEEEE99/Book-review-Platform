@@ -182,6 +182,7 @@
 - Redux Toolkit
 - RTK Query
 - Eslint & Prettier
+- RabbitMQ
 - Vite
 
 ### 백엔드
