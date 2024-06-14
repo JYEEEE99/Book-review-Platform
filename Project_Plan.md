@@ -93,6 +93,24 @@
 - **작성한 리뷰 목록**: 사용자가 작성한 리뷰 목록 보임
 - **리뷰 수정 및 삭제**: 작성한 리뷰 수정 및 삭제 가능
 
+### 404 Not Found 페이지 (ErrorPage404)
+파일: `ErrorPage404.tsx`
+
+#### 기능
+- **페이지 제목 표시**: "404 - Page Not Found"라는 제목을 표시하여 사용자가 페이지를 찾을 수 없음을 알림
+- **안내 메시지 표시**: 사용자가 요청한 페이지가 존재하지 않음을 알리는 간단한 설명 메시지 표시
+- **홈페이지로 이동 링크 제공**: 사용자가 쉽게 홈페이지로 돌아갈 수 있도록 링크 제공
+
+### Internal Server Error 페이지 (ErrorPage500)
+파일: `ErrorPage500.tsx`
+
+#### 기능
+- **페이지 제목 표시**: "500 - Internal Server Error"라는 제목을 표시하여 서버 오류가 발생했음을 알림
+- **안내 메시지 표시**: 서버에서 문제가 발생했음을 알리는 설명 메시지 표시
+- **재시도 버튼 제공**: 사용자가 페이지를 다시 로드할 수 있도록 재시도 버튼 제공
+- **홈페이지로 이동 링크 제공**: 사용자가 쉽게 홈페이지로 돌아갈 수 있도록 링크 제공
+
+
 ### 다국어 지원 설정 페이지 (Language Settings)
 파일: `LanguageSettings.tsx`
 
@@ -227,6 +245,8 @@
     BookManagement.tsx
     Favorites.tsx
     LanguageSettings.tsx
+    ErrorPage404.tsx
+    ErrorPage500.tsx
   /app
     store.ts
   /styles
