@@ -86,13 +86,6 @@
 #### 기능
 - **알림 표시**: 도서 추가, 리뷰에 대한 좋아요/댓글 알림 표시
 
-### 리뷰 작성 및 관리 페이지 (Review Management)
-파일: `ReviewManagement.tsx`
-
-#### 기능
-- **작성한 리뷰 목록**: 사용자가 작성한 리뷰 목록 보임
-- **리뷰 수정 및 삭제**: 작성한 리뷰 수정 및 삭제 가능
-
 ### 404 Not Found 페이지 (ErrorPage404)
 파일: `ErrorPage404.tsx`
 
@@ -109,13 +102,6 @@
 - **안내 메시지 표시**: 서버에서 문제가 발생했음을 알리는 설명 메시지 표시
 - **재시도 버튼 제공**: 사용자가 페이지를 다시 로드할 수 있도록 재시도 버튼 제공
 - **홈페이지로 이동 링크 제공**: 사용자가 쉽게 홈페이지로 돌아갈 수 있도록 링크 제공
-
-
-### 다국어 지원 설정 페이지 (Language Settings)
-파일: `LanguageSettings.tsx`
-
-#### 기능
-- **언어 설정**: 사용자 인터페이스 언어 설정 가능 (예: 영어, 한국어)
 
 ---
 
@@ -238,13 +224,10 @@
   - ``Home.tsx``: 홈 페이지, 최신 리뷰 섹션, 인기 도서 섹션, 검색 바, 카테고리 필터, 도서 리스트 포함
   - ``BookList.tsx`: 도서 목록 페이지, 카테고리 필터, 검색 바, 도서 리스트 포함
   - ``BookDetail.tsx`: 도서 상세 정보 페이지, 도서 정보, 리뷰 리스트, 리뷰 작성 폼 포함
-  - ``ReviewManagement.tsx``: 리뷰 작성 및 관리 페이지, 작성한 리뷰 목록, 리뷰 수정 및 삭제 포함
-  - ``NotificationsPage.tsx``: 알림 페이지, 도서 추가, 리뷰에 대한 좋아요/댓글 알림 표시
   - ``Signup.tsx``: 회원가입 페이지, 이메일, 비밀번호, 닉네임 입력 폼 및 유효성 검사 포함
   - ``Login.tsx``: 로그인 페이지, 이메일과 비밀번호로 로그인, 소셜 로그인 버튼 포함
   - ``Profile.tsx``: 프로필 페이지, 사용자 정보 보기 및 수정 기능 포함
   - ``Favorites.tsx``: 즐겨찾기 페이지, 즐겨찾기에 추가한 도서 및 리뷰 목록 표시
-  - ``LanguageSettings.tsx``: 다국어 지원 설정 페이지, 사용자 인터페이스 언어 설정 기능 포함
   - ``ErrorPage404.tsx``: 404 Not Found 페이지, 사용자가 존재하지 않는 페이지를 요청했을 때 보여주는 페이지
   - ``ErrorPage500.tsx``: 500 Internal Server Error 페이지, 서버에서 예기치 않은 오류가 발생했을 때 사용자에게 알리는 페이지
 
@@ -315,13 +298,10 @@
     Home.tsx
     BookList.tsx
     BookDetail.tsx
-    ReviewManagement.tsx
-    NotificationsPage.tsx
     Signup.tsx
     Login.tsx
     Profile.tsx
     Favorites.tsx
-    LanguageSettings.tsx
     ErrorPage404.tsx
     ErrorPage500.tsx
   /app

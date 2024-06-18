@@ -6,7 +6,7 @@
 
 ## 역할 분담 및 개발 기간
 
-### 총 개발 예상 기간 21일
+### 총 개발 예상 기간 18일
 
 ### 프론트엔드 개발자 (3명)
 
@@ -15,7 +15,6 @@
   - `Home.tsx`, `BookList.tsx`, `BookDetail.tsx`, `ErrorPage404.tsx`, `ErrorPage500.tsx`
   - `Header.tsx`, `Footer.tsx`, `BookCard.tsx`
 - **컴포넌트별 기능**:
-  - `Home.tsx`: 최신 리뷰 섹션, 인기 도서 섹션, 검색 바, 카테고리 필터, 도서 리스트
   - `BookList.tsx`: 카테고리 필터, 검색 바, 도서 리스트
   - `BookDetail.tsx`: 도서 정보, 리뷰 리스트, 리뷰 작성 폼
   - `Header.tsx`: 상단 네비게이션 바, 로그인 상태 표시, 주요 페이지 링크 제공
@@ -27,16 +26,15 @@
  1. `Header.tsx` - 1일
  2. `Footer.tsx` - 1일
  3. `BookCard.tsx` - 2일
- 4. `Home.tsx` - 2일
- 5. `BookList.tsx`- 3일
- 6. `BookDetail.tsx` - 3일
- 7. `ErrorPage404.tsx` - 1일
- 8. `ErrorPage500.tsx` - 1일
+ 4. `BookList.tsx`- 2일
+ 5. `BookDetail.tsx` - 2일
+ 6. `ErrorPage404.tsx` - 1일
+ 7. `ErrorPage500.tsx` - 1일
 
 
 #### 두 번째 프론트엔드 개발자
 - **구현해야 하는 페이지 및 컴포넌트**:
-  - `ReviewManagement.tsx`, `Notifications.tsx`
+  - `Notifications.tsx`
   - `LatestReviews.tsx`, `PopularBooks.tsx`
 - **알림 기능 구현**:
   - 사용자가 작성한 리뷰에 좋아요, 댓글 알림 UI, 새로운 도서 추가 알림
@@ -44,19 +42,19 @@
   - 리뷰 작성 폼 (평점 및 내용), 리뷰 수정 및 삭제 기능 (작성자 본인만)
 - **타입 정의 및 코드 안정성 확보**
 - **컴포넌트별 기능**:
-  - `ReviewManagement.tsx`: 작성한 리뷰 목록, 리뷰 수정 및 삭제
+  - `Home.tsx`: 최신 리뷰 섹션, 인기 도서 섹션, 검색 바, 카테고리 필터, 도서 리스트
   - `Notifications.tsx`: 도서 추가, 리뷰에 대한 좋아요/댓글 알림 표시
   - `LatestReviews.tsx`: 최신 리뷰 섹션, 슬라이드 형식으로 최근 리뷰 표시
   - `PopularBooks.tsx`: 인기 도서 섹션, 슬라이드 형식으로 인기 도서 표시
 - **개발 우선 순위**
- 1. ``ReviewManagement.tsx`` - 5일
- 2. ``Notifications.tsx`` - 3일
- 3. ``LatestReviews.tsx`` - 3일
- 4. ``PopularBooks.tsx`` - 3일
+ 1. `Home.tsx` - 2일
+ 2. ``Notifications.tsx`` - 2일
+ 3. ``LatestReviews.tsx`` - 2일
+ 4. ``PopularBooks.tsx`` - 2일
 
 #### 세 번째 프론트엔드 개발자
 - **구현해야 하는 페이지 및 컴포넌트**:
-  - `Signup.tsx`, `Login.tsx`, `Profile.tsx`, `Favorites.tsx`, `LanguageSettings.tsx` (후 순위)
+  - `Signup.tsx`, `Login.tsx`, `Profile.tsx`, `Favorites.tsx`
   - `SearchBar.tsx`, `CategoryFilter.tsx`
 - **Styled-Components를 사용한 전체적인 스타일링 및 컴포넌트별 스타일 정의**
 - **반응형 디자인 구현**:
@@ -73,17 +71,13 @@
   - `Favorites.tsx`: 즐겨찾기에 추가한 도서 및 리뷰 목록 표시
   - `SearchBar.tsx`: 도서 검색 기능, 입력 필드 및 검색 버튼 포함
   - `CategoryFilter.tsx`: 도서 카테고리 필터링 기능, 선택된 카테고리에 따라 도서 목록 갱신
-  - `LanguageSettings.tsx`: 사용자 인터페이스 언어 설정 기능 포함 (후 순위)
 **개발 우선 순위**
- 1. ``SearchBar.tsx`` - 2일
- 2. ``CategoryFilter.tsx`` - 2일
- 3. ``Signup.tsx`` - 5일
+ 1. ``SearchBar.tsx`` - 1일
+ 2. ``CategoryFilter.tsx`` - 1일
+ 3. ``Signup.tsx`` - 2일
  4. ``Login.tsx``- 1일
- 5. ``Profile.tsx`` - 2일
- 6. ``Favorites.tsx`` - 2일
-
-#### 먼저 개발 끝난 프론트엔드 개발자 
- ``LanguageSettings.tsx``
+ 5. ``Profile.tsx`` - 1일
+ 6. ``Favorites.tsx`` - 1일
 
 
 ### 백엔드 개발자 (4명)
@@ -94,17 +88,17 @@
 - 소셜 로그인 API 구현: 구글, 페이스북 등
 
 - **개발 우선 순위**
-  - 회원가입 API - 3일
-  - 로그인 API - 5일
-  - 사용자 프로필 API - 3일
-  - 소셜 로그인 API - 5일
+  - 회원가입 API - 2일
+  - 로그인 API - 3일
+  - 사용자 프로필 API - 2일
+  - 소셜 로그인 API - 3일
 
 #### 백엔드 개발자 2
 - 도서 정보 CRUD API 구현: 도서 목록 조회 API, 도서 상세 정보 조회 API,
 - 도서 카테고리 및 검색 기능 API 구현: 카테고리별 도서 목록 조회 API, 제목 & 저자 등으로 검색 기능
 
 - **개발 우선 순위**
-  - 도서 목록 조회 API - 2일
+  - 도서 목록 조회 API - 1일
   - 도서 상세 정보 조회 API - 2일
   - 도서 카테고리 조회 API - 2일
 
