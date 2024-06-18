@@ -33,11 +33,11 @@
 ## 폰트 스타일
 
 ### 기본 폰트
-- **헤더**: Arial, Bold, 24px
+- **헤더**: NotoSans, Bold, 24px
   - 사용 위치: 페이지 헤더, 섹션 타이틀
-- **본문**: Arial, Regular, 16px
+- **본문**: NotoSans, Regular, 16px
   - 사용 위치: 일반 텍스트, 단락
-- **작은 텍스트**: Arial, Regular, 12px
+- **작은 텍스트**: NotoSans, Regular, 12px
   - 사용 위치: 보조 정보, 푸터 텍스트
 
 ### 텍스트 스타일
@@ -87,7 +87,7 @@
 - **테두리**: 없음
 - **둥근 모서리**: 4px
 - **패딩**: 10px 20px
-- **폰트**: Arial, Bold, 16px
+- **폰트**: NotoSans, Bold, 16px
 - **호버 상태**
   - 배경 색상: #F5A623 (밝은 주황색)
   - 텍스트 색상: #FFFFFF (흰색)
@@ -108,7 +108,7 @@
 - **호버 상태**
   - 배경 색상: #FF1744 (더 진한 빨강)
 - **패딩**: 10px 20px
-- **폰트**: Arial, Bold, 16px
+- **폰트**: NotoSans, Bold, 16px
 
 ### 성공 버튼
 - **배경 색상**: #4CAF50 (Success Green)
@@ -116,7 +116,7 @@
 - **호버 상태**
   - 배경 색상: #388E3C (더 진한 녹색)
 - **패딩**: 10px 20px
-- **폰트**: Arial, Bold, 16px
+- **폰트**: NotoSans, Bold, 16px
 
 ---
 
@@ -152,8 +152,8 @@
 - **배경 색상**: #FFFFFF (흰색)
 - **이미지 높이**: 150px
 - **텍스트 패딩**: 10px 0
-- **도서 제목**: Arial, Bold, 18px, #222222 (검은색)
-- **저자**: Arial, Regular, 14px, #757575 (Dark Gray)
+- **도서 제목**: NotoSans, Bold, 18px, #222222 (검은색)
+- **저자**: NotoSans, Regular, 14px, #757575 (Dark Gray)
 - **평점**
   - 색상: #F5A623 (밝은 주황색)
   - 아이콘 크기: 16px
@@ -173,22 +173,22 @@
 - **배경 색상**: #3A3A3A (어두운 회색)
 - **텍스트 색상**: #FFFFFF (흰색)
 - **패딩**: 10px 20px
-- **폰트**: Arial, Bold, 18px
+- **폰트**: NotoSans, Bold, 18px
 
 ### 모달 본문
 - **배경 색상**: #FFFFFF (흰색)
 - **텍스트 색상**: #222222 (검은색)
 - **패딩**: 20px
-- **폰트**: Arial, Regular, 16px
+- **폰트**: NotoSans, Regular, 16px
 
 ---
 
 ## 컴포넌트 디자인
 ### BookListItem.tsx
 - **이미지 높이**: 250px
-- **도서 제목**: 18px, Arial, Bold, #222222
-- **저자명**: 16px, Arial, Regualr #222222
-- **도서미리보기**: 15px, Arial, Regualr,#757575
+- **도서 제목**: 18px, NotoSans, Bold, #222222
+- **저자명**: 16px, NotoSans, Regualr #222222
+- **도서미리보기**: 15px, NotoSans, Regualr,#757575
 - **버튼**: 폰트 사이즈-13px,패딩- 5px 12px, 기본버튼 컴포넌트 사용
 - **아이콘**
   - **테두리 색상**: #FF7D7D 
