@@ -175,15 +175,17 @@
 ## 기술 스택
 
 ### 프론트엔드
-- React
+- Next.js
 - TypeScript
 - Styled-Components
-- React-Router
-- Redux Toolkit
-- RTK Query
+- Next.js의 라우팅 사용
+- Redux
+- React Query
 - Eslint & Prettier
 - RabbitMQ
-- Vite
+- Next.js의 빌드 사용
+- React Hook Form
+
 
 ### 백엔드
 - Java (예정)

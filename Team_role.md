@@ -14,7 +14,6 @@
 - **구현해야 하는 페이지 및 컴포넌트**:
   - `Home.tsx`, `BookList.tsx`, `BookDetail.tsx`, `ErrorPage404.tsx`, `ErrorPage500.tsx`
   - `Header.tsx`, `Footer.tsx`, `BookCard.tsx`
-- **상태 관리**: Redux Toolkit을 사용한 전역 상태 관리
 - **컴포넌트별 기능**:
   - `Home.tsx`: 최신 리뷰 섹션, 인기 도서 섹션, 검색 바, 카테고리 필터, 도서 리스트
   - `BookList.tsx`: 카테고리 필터, 검색 바, 도서 리스트
