@@ -179,12 +179,35 @@
 
 ---
 
+## 예상 문제점 및 고려 사항
+#### 기능 구현의 세부 사항
+- 리뷰 작성: 글자 수 제한, 비속어 필터링, 이미지 업로드 등 세부 요구사항이 추가될 수 있음
+- 검색 기능: 검색 조건(제목, 저자, 출판사 등)의 다양성, 검색 결과 정렬 기준(평점순, 최신순)등 세부사항 추가 될 수 있음
+- 카테고리 관리: 도서의 카테고리 추가, 수정, 복수 선택 등 세부사항 추가 될 수 있음
+- 페이지네이션: 도서 목록 및 리뷰 목록의 페이지네이션 구현 방법에 따라 성능 최적화 필요
+- 알림 설정: 사용자가 알림을 수신할 조건(리뷰 좋아요, 댓글, 새로운 도서 추가)을 세부적으로 설정, 알림 끄기 등 세부사항 추가 될 수 있음
+- 프로필 관리: 닉네임 변경 시 중복 검사, 프로필 사진 업로드 크기 및 형식 제한
+- 즐겨찾기 관리: 즐겨찾기 목록의 정렬, 필터링 기능 등 세부사항 추가 될 수 있음
+
+#### OAuth 구현
+- 소셜 로그인 후 사용자 데이터 처리, 세션 관리, 보안 이슈 등 여러가지 복잡성이 있어 구현 도중에 변경될 수 있음
+
+#### 상태 관리
+- Redux 및 React Query를 사용할 때 초기 상태 정의, 비동기 액션 처리, 에러 핸들링에서 변경이 필요할 수 있음
+
+#### 보안 및 인증
+- JWT 토큰 관리, 토큰 갱신, 사용자 인증 상태 유지 등 보안 관련 부분에서 많은 수정이 필요할 수 있음 
+
+
+---
+
 ## 프로젝트 예상 구조 및 각 폴더의 역할
 
 ### components폴더: 재사용 가능한 UI 컴포넌트들을 저장
 - **각 컴포넌트 폴더**
   - ``tsx`` 파일: 컴포넌트의 React 코드
   - ``styles.ts`` 파일: 해당 컴포넌트의 스타일 정의 (styled-components 사용)
+
 
 ### features폴더: 특정 기능과 관련된 상태 관리를 포함한 로직을 관리
 - **auth**: 사용자 인증 관련 상태 관리 ``authSlice.ts``
@@ -206,7 +229,6 @@
   - ``fetchBookDetailApi.ts``: 도서 상세 정보 조회 API
   - ``addBookApi.ts``: 도서 추가 API
   - ``updateBookApi.ts``: 도서 수정 API
-  - ``deleteBookApi.ts``: 도서 삭제 API
 
 #### reviews폴더
   - ``addReviewApi.ts``: 리뷰 작성 API
@@ -228,12 +250,46 @@
   - ``Login.tsx``: 로그인 페이지, 이메일과 비밀번호로 로그인, 소셜 로그인 버튼 포함
   - ``Profile.tsx``: 프로필 페이지, 사용자 정보 보기 및 수정 기능 포함
   - ``Favorites.tsx``: 즐겨찾기 페이지, 즐겨찾기에 추가한 도서 및 리뷰 목록 표시
+  - ``BookManagement.tsx``: 도서 추가 및 수정 페이지 (관리자 전용)
   - ``ErrorPage404.tsx``: 404 Not Found 페이지, 사용자가 존재하지 않는 페이지를 요청했을 때 보여주는 페이지
   - ``ErrorPage500.tsx``: 500 Internal Server Error 페이지, 서버에서 예기치 않은 오류가 발생했을 때 사용자에게 알리는 페이지
 
-## ``store.ts``: Redux 스토어 설정 및 전역 상태 관리
+## 추가 폴더 및 파일
+
+``store.ts``: Redux 스토어 설정 및 전역 상태 관리
+
+#### styles 폴더: 전역 스타일 정의
+  - ``GlobalStyle.ts``: 전역 스타일 파일
+
+#### utils 폴더: 다양한 유틸리티 함수 및 설정 파일
+- ``apiClient.ts``: Axios 인스턴스나 Fetch API 설정
+- ``authHelpers.ts``: 인증 관련 유틸리티 함수
+- ``formatDate.ts``: 날짜 형식 변환 유틸리티 함수
+
+#### middlewares 폴더: 전역 미들웨어 파일
+- ``errorMiddleware.ts``: 전역 에러 처리 미들웨어
+- ``authMiddleware.ts``: 인증 미들웨어
+
+#### services 폴더: 비즈니스 로직을 처리하는 서비스 파일
+- ``authService.ts``: 사용자 인증 관련 서비스 로직
+- ``bookService.ts``: 도서 관리 관련 서비스 로직
+- ``reviewService.ts``: 리뷰 관리 관련 서비스 로직
+- ``notificationService.ts``: 알림 관리 관련 서비스 로직 (RabbitMQ 사용)
+
+#### config 폴더: 설정 파일
+- ``rabbitmqConfig.ts``: RabbitMQ 설정 파일
+- ``oauthConfig.ts``: OAuth 설정 파일
+- ``apiConfig.ts``: API 엔드포인트 설정 파일
+
+#### types 폴더: 타입 정의 파일
+- ``authTypes.ts``: 인증 관련 타입 정의
+- ``bookTypes.ts``: 도서 관련 타입 정의
+- ``reviewTypes.ts``: 리뷰 관련 타입 정의
+- ``notificationTypes.ts``: 알림 관련 타입 정의
 
 
+
+## 프로젝트 폴더 예상 구조
 ```plaintext
 /src
   /components
@@ -302,16 +358,36 @@
     Login.tsx
     Profile.tsx
     Favorites.tsx
+    BookManagement.tsx
     ErrorPage404.tsx
     ErrorPage500.tsx
   /app
     store.ts
   /styles
     GlobalStyle.ts
+  /utils
+    apiClient.ts     // Axios 인스턴스나 Fetch API 설정
+    authHelpers.ts   // 인증 관련 유틸리티 함수
+    formatDate.ts    // 날짜 형식 변환 유틸리티 함수
+  /middlewares
+    errorMiddleware.ts    // 전역 에러 처리 미들웨어
+    authMiddleware.ts     // 인증 미들웨어
+  /services
+    authService.ts    // 사용자 인증 관련 서비스 로직
+    bookService.ts    // 도서 관리 관련 서비스 로직
+    reviewService.ts  // 리뷰 관리 관련 서비스 로직
+    notificationService.ts  // 알림 관리 관련 서비스 로직 (RabbitMQ 사용)
+  /config
+    rabbitmqConfig.ts  // RabbitMQ 설정 파일
+    oauthConfig.ts     // OAuth 설정 파일
+    apiConfig.ts       // API 엔드포인트 설정 파일
+  /types
+    authTypes.ts   // 인증 관련 타입 정의
+    bookTypes.ts   // 도서 관련 타입 정의
+    reviewTypes.ts // 리뷰 관련 타입 정의
+    notificationTypes.ts // 알림 관련 타입 정의
   index.tsx
   App.tsx
-
----
 
 
 
