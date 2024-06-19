@@ -164,12 +164,10 @@
 - Next.js
 - TypeScript
 - Styled-Components
-- Next.js의 라우팅 사용
 - Redux
 - React Query
 - Eslint & Prettier
 - RabbitMQ
-- Next.js의 빌드 사용
 - React Hook Form
 
 **Next.js**
