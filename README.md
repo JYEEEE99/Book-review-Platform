@@ -1,36 +1,124 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 📚 Book Review Platform
 
-## Getting Started
+## 프로젝트 소개
+**Book Review Platform**은 사용자가 다양한 도서에 대한 리뷰를 작성하고, 다른 사용자와 공유할 수 있는 온라인 플랫폼입니다. 사용자 경험과 성능을 최적화하여 독서 커뮤니티를 활성화하는 것을 목표로 합니다.
+## 팀원 소개
 
-First, run the development server:
+이 프로젝트는 **구름일조** 스터디 팀원들과 함께 개발예정입니다.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+- 🌟 **진영**: FE
+- 📚 **재혁**: FE
+- 🌐 **범수**: FE
+- 💻 **정민**: BE
+- 👩‍💻 **예은**: BE
+- 🛠️ **준형**: BE
+- 🔍 **민호**: BE
+
+함께 배워가며, 서로에게 동기부여가 되어주는 멋진 팀원이 되어 봅시다 🙌
+
+## 주요 기능
+- **회원가입 및 로그인**:
+  - 이메일, 비밀번호, 닉네임을 통한 회원가입
+  - 소셜 로그인 (Google, Facebook)
+- **도서 관리**:
+  - 다양한 카테고리와 검색 기능을 통해 도서 목록 조회
+  - 도서 상세 정보 확인 (제목, 저자, 출판사, 출판일, 설명)
+- **리뷰 관리**:
+  - 평점(1~5점) 및 내용 작성
+  - 리뷰 수정 및 삭제 (작성자 본인만 가능)
+  - 다른 사용자의 리뷰에 좋아요/싫어요 평가
+- **프로필 관리**:
+  - 닉네임 및 프로필 사진 수정
+- **알림 기능**:
+  - 리뷰 좋아요/댓글 알림
+  - 새로운 도서 추가 알림
+- **도서 추가 및 수정 (관리자 전용)**:
+  - 도서 추가, 수정, 삭제
+
+## 기술 스택
+- **프론트엔드**:
+  - Next.js: 서버 사이드 렌더링(SSR) 및 정적 사이트 생성(SSG) 지원
+  - TypeScript: 타입 안정성 및 코드 품질 향상
+  - Styled-Components: 컴포넌트 기반의 동적 스타일링
+  - Redux: 클라이언트 상태 관리
+  - React Query: 서버 상태 관리 및 데이터 페칭
+  - React Hook Form: 성능 최적화된 폼 관리
+  - Eslint & Prettier: 코드 품질 유지 및 일관된 코드 스타일
+
+- **백엔드**
+    - Java (예정)
+    - Spring Boot (예정)
+
+
+## 프로젝트 구조
+```
+/src
+  /app
+    page.tsx        # 앱 진입점
+    layout.tsx      # 최상위 컴포넌트
+  /components       # 재사용 가능한 UI 컴포넌트
+  /features         # 특정 기능과 관련된 상태 관리 로직
+  /api              # API 호출 로직
+  /pages            # 라우팅되는 주요 페이지
+  /store            # Redux 스토어 설정
+  /styles           # 전역 스타일 정의
+  /utils            # 유틸리티 함수 및 설정 파일
+  /middlewares      # 전역 미들웨어 파일
+  /services         # 비즈니스 로직 처리
+  /config           # 설정 파일
+  /types            # 타입 정의 파일
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## API 엔드포인트
+- **사용자 관리**:
+  - ``POST /api/auth/signup``: 회원가입
+  - ``POST /api/auth/login``: 로그인
+  - ``GET /api/users/me``: 내 프로필 정보 가져오기
+  - ``PUT /api/users/me``: 내 프로필 수정
+- **도서 관리**:
+  - ``GET /api/books``: 도서 목록 조회
+  - ``GET /api/books/{id}``: 도서 상세 정보 조회
+  - ``POST /api/books``: 도서 추가 (관리자 권한)
+  - ``PUT /api/books/{id}``: 도서 수정 (관리자 권한)
+  - ``DELETE /api/books/{id}``: 도서 삭제 (관리자 권한)
+- **리뷰 관리**:
+  - ``POST /api/books/{id}/reviews``: 리뷰 작성
+  - ``PUT /api/reviews/{id}``: 리뷰 수정
+  - ``DELETE /api/reviews/{id}``: 리뷰 삭제
+  - ``POST /api/reviews/{id}/like``: 리뷰 좋아요
+  - ``POST /api/reviews/{id}/dislike``: 리뷰 싫어요
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 주요 페이지
+- **홈 페이지 (Home)**:
+  - 최신 리뷰 섹션, 인기 도서 섹션, 검색 바, 카테고리 필터, 도서 리스트
+- **도서 상세 페이지 (Book Detail)**:
+  - 도서 정보, 리뷰 리스트, 리뷰 작성 폼
+- **회원가입 페이지 (Signup)**:
+  - 이메일, 비밀번호, 닉네임 입력 폼 및 유효성 검사, 소셜 로그인
+- **로그인 페이지 (Login)**:
+  - 이메일과 비밀번호로 로그인, 소셜 로그인 버튼
+- **프로필 페이지 (Profile)**:
+  - 사용자 정보 보기 및 수정
+- **도서 관리 페이지 (Book Management)**:
+  - 도서 추가, 수정, 삭제 (관리자 전용)
+- **즐겨찾기 페이지 (Favorites)**:
+  - 즐겨찾기 도서 및 리뷰 목록
+- **에러 페이지**:
+  - 404 Not Found, 500 Internal Server Error
 
-## Learn More
+## 주요 컴포넌트
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **Header**
+  - 네비게이션 바, 로그인 상태 표시, 주요 페이지 링크 제공
+- **Notifications**:
+  - 모든 페이지에서 접근 가능한 모달 창, 알림 리스트 표시 및 닫기 버튼 포함
+- **BookCard**
+  - 도서 카드 컴포넌트, 도서 제목, 저자, 평점 등 간단한 정보 표시
+- **SearchBar**
+  - 도서 검색 기능, 입력 필드 및 검색 버튼 포함
+- **CategoryFilter**
+  - 도서 카테고리 필터링 기능, 선택된 카테고리에 따라 도서 목록 갱신
+- **ReviewForm**
+  - 리뷰 작성 폼, 평점 및 내용 입력 기능 포함
