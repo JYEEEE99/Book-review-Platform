@@ -56,19 +56,20 @@
 ```
 /src
   /app
-    page.tsx        # 앱 진입점
-    layout.tsx      # 최상위 컴포넌트
-  /components       # 재사용 가능한 UI 컴포넌트
-  /features         # 특정 기능과 관련된 상태 관리 로직
-  /api              # API 호출 로직
-  /pages            # 라우팅되는 주요 페이지
-  /store            # Redux 스토어 설정
-  /styles           # 전역 스타일 정의
-  /utils            # 유틸리티 함수 및 설정 파일
-  /middlewares      # 전역 미들웨어 파일
-  /services         # 비즈니스 로직 처리
-  /config           # 설정 파일
-  /types            # 타입 정의 파일
+    page.tsx        # 앱 진입점, 애플리케이션이 시작되는 파일
+    layout.tsx      # 최상위 컴포넌트, 모든 페이지에 공통으로 적용될 레이아웃을 정의
+  /components       # 재사용 가능한 UI 컴포넌트, 여러 페이지에서 사용될 수 있는 공통 컴포넌트들을 저장
+  /features         # 특정 기능과 관련된 상태 관리 로직, Redux를 사용하여 기능별 상태 관리를 처리
+  /api              # API 호출 로직, 서버와 통신하는 API 요청을 정의하며 React Query를 통해 관리
+  /pages            # 라우팅되는 주요 페이지, 각 URL 경로에 해당하는 페이지 컴포넌트를 저장
+  /store            # Redux 스토어 설정, 전역 상태 관리를 위한 Redux 스토어를 설정
+  /styles           # 전역 스타일 정의, 애플리케이션 전반에 적용될 CSS 스타일을 정의
+  /utils            # 유틸리티 함수 및 설정 파일, 여러 곳에서 재사용될 수 있는 유틸리티 함수와 설정 파일을 저장
+  /middlewares      # 전역 미들웨어 파일, Redux 미들웨어와 같은 전역 미들웨어를 정의
+  /services         # 비즈니스 로직 처리 (유효성 검사, 평균 평점 계산, 권한 관리 등), 핵심 로직을 처리하는 함수들을 저장
+  /config           # 설정 파일, 환경 변수와 같은 설정 파일을 저장
+  /types            # 타입 정의 파일, TypeScript 타입 정의를 저장
+
 ```
 
 
