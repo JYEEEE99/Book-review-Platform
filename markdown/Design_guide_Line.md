@@ -37,7 +37,7 @@
   - 사용 위치: 페이지 헤더, 섹션 타이틀
 - **본문**: NotoSans, Regular, 16px
   - 사용 위치: 일반 텍스트, 단락
-- **작은 텍스트**: NotoSans, Regular, 12px
+- **작은 텍스트**: NotoSans, Regular, 14px
   - 사용 위치: 보조 정보, 푸터 텍스트
 
 ### 텍스트 스타일
