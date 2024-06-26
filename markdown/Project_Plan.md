@@ -10,7 +10,7 @@
 - **회원가입**: 이메일, 비밀번호, 닉네임 입력 (이메일 중복 체크)
 - **로그인**: 이메일과 비밀번호로 로그인, 인증 토큰 발급, 소셜 로그인(Google, Facebook)
 - **로그아웃**: 사용자 로그아웃 기능
-- **프로필 수정**: 닉네임 및 프로필 사진 수정
+- **프로필 수정**: 닉네임 및 프로필 사진 수정 비밀번호 수정
 
 ### 도서 관리
 - **도서 목록 보기**: 다양한 카테고리와 검색 기능을 통해 도서 목록 확인
@@ -20,10 +20,10 @@
 - **리뷰 작성**: 평점(1~5점) 및 내용 작성
 - **리뷰 수정 및 삭제**: 작성자 본인만 수정 및 삭제 가능
 - **리뷰 평가**: 다른 사용자의 리뷰에 대해 좋아요/싫어요 평가
+- **대댓글 기능**: 다른 사용자의 댓글에 대댓글 달기
 
 ### 알림 기능
 - **리뷰 알림**: 사용자가 작성한 리뷰에 좋아요/댓글 알림
-- **도서 추가 알림**: 새로운 도서 추가 알림
 
 ### 도서 추가 및 수정
 - **도서 추가 및 수정**: 도서 수정 및 추가를 위한 관리자 전용 페이지
@@ -36,11 +36,10 @@
 파일: `Home.tsx`
 
 #### 기능
-- **최신 리뷰 섹션**: 최신 리뷰 보임 (가로 자동 슬라이드)
-- **인기 도서 섹션**: 인기 도서 보임 (가로 자동 슬라이드)
+- **평점 좋은 책 섹션**: 평점 좋은 책 추천 섹션(슬라이드)
+- **베스트셀러 섹션**: 베스트셀러 도서 보임 (자동 슬라이드)
+- **주간 리뷰 섹션**: 최근 리뷰가 달린 책 리스트
 - **검색 바**: 도서 제목이나 저자 이름으로 검색 가능
-- **카테고리 필터**: 특정 카테고리 도서 빠르게 찾기
-- **도서 리스트**: 카테고리별 도서 리스트 보임
 
 ### 도서 상세 페이지 (Book Detail)
 파일: `BookDetail.tsx`
@@ -49,6 +48,7 @@
 - **도서 정보**: 선택한 도서의 제목, 저자, 출판사, 출판일, 설명 보임
 - **리뷰 리스트**: 도서에 대한 리뷰 목록 보임
 - **리뷰 작성 폼**: 리뷰 작성 가능
+- **관리자 권한으로 도서 삭제**: 관리자만 보이는 삭제버튼, 관리자 권한이 있을경우 삭제 가능
 
 ### 회원가입 페이지 (Signup)
 파일: `Signup.tsx`
@@ -66,25 +66,25 @@
 파일: `Profile.tsx`
 
 #### 기능
-- **사용자 정보 보기 및 수정**: 닉네임 및 프로필 사진 수정 가능
+- **사용자 정보 보기 및 수정**: 닉네임 및 프로필 사진 수정 가능 비밀번호 수정 가능
 
 ### 도서 추가 및 수정 페이지 (BookManagement)
 파일: `BookManagement.tsx`
 
 #### 기능
-- **도서 관리**: 도서 추가, 수정, 삭제 가능
+- **도서 관리**: 도서 추가, 수정
 
 ### 즐겨찾기 페이지 (Favorites)
 파일: `Favorites.tsx`
 
 #### 기능
-- **즐겨찾기 목록**: 즐겨찾기에 추가한 도서 및 리뷰 목록 보임
+- **즐겨찾기 목록**: 즐겨찾기에 추가한 도서 목록 보임
 
 ### 알림 모달 (Notifications)
 파일: `Notifications.tsx`
 
 #### 기능
-- **알림 표시**: 도서 추가, 리뷰에 대한 좋아요/댓글 알림 표시
+- **알림 표시**: 리뷰에 대한 좋아요/댓글 알림 표시, 대댓글 알림 표시
 
 ### 404 Not Found 페이지 (ErrorPage404)
 파일: `ErrorPage404.tsx`
@@ -100,7 +100,6 @@
 #### 기능
 - **페이지 제목 표시**: "500 - Internal Server Error"라는 제목을 표시하여 서버 오류가 발생했음을 알림
 - **안내 메시지 표시**: 서버에서 문제가 발생했음을 알리는 설명 메시지 표시
-- **재시도 버튼 제공**: 사용자가 페이지를 다시 로드할 수 있도록 재시도 버튼 제공
 - **홈페이지로 이동 링크 제공**: 사용자가 쉽게 홈페이지로 돌아갈 수 있도록 링크 제공
 
 ---
@@ -134,12 +133,7 @@
 ### 사용자 관리
 - 회원가입: 이메일, 비밀번호, 닉네임 입력, 이메일 중복 체크
 - 로그인: 이메일과 비밀번호로 로그인, 인증 토큰 발급
-- 프로필 수정: 닉네임 및 프로필 사진 수정
-
-### 도서 목록 보기
-- 카테고리별 도서 목록
-- 검색 기능: 제목, 저자 등으로 검색
-- 페이지네이션 적용
+- 프로필 수정: 닉네임 및 프로필 사진 수정 비밀번호 수정
 
 ### 도서 상세 정보
 - 도서 제목, 저자, 출판사, 출판일, 간략한 설명
@@ -148,6 +142,7 @@
 - 리뷰 작성: 평점(1~5점) 및 내용 작성
 - 리뷰 수정 및 삭제: 작성자 본인만 수정 및 삭제 가능
 - 리뷰 평가: 좋아요/싫어요 평가, 평가 수 표시
+- 대댓글 기능: 다른 사용자의 댓글에 대댓글 달기
 
 ---
 
@@ -348,27 +343,21 @@
     /Footer
       Footer.tsx
       Footer.styles.ts
-    /BookCard
-      BookCard.tsx
-      BookCard.styles.ts
     /SearchBar
       SearchBar.tsx
       SearchBar.styles.ts
     /CategoryFilter
       CategoryFilter.tsx
       CategoryFilter.styles.ts
-    /LatestReviews
-      LatestReviews.tsx
-      LatestReviews.styles.ts
-    /PopularBooks
-      PopularBooks.tsx
-      PopularBooks.styles.ts
     /Notifications
       Notifications.tsx
       Notifications.styles.ts
-    /BookListItem
-      BookListItem.tsx
-      BookListItem.styles.ts
+    /ProfileDropdown
+      ProfileDropdown.tsx
+      ProfileDropdown.styles.ts
+    /ReviewForm
+      ReviewForm.tsx
+      ReviewForm.styles.ts
   /features
     /auth
       authSlice.ts
@@ -401,13 +390,14 @@
       addNotificationApi.ts
   /pages
     Home.tsx
-    BookList.tsx
     BookDetail.tsx
     Signup.tsx
     Login.tsx
     Profile.tsx
     Favorites.tsx
     BookManagement.tsx
+    SearchList.tsx
+    AdminBookForm.tsx
     ErrorPage404.tsx
     ErrorPage500.tsx
   /app

@@ -12,55 +12,38 @@
 
 #### 첫 번째 프론트엔드 개발자
 - **구현해야 하는 페이지 및 컴포넌트**:
-  - `Home.tsx`, `BookList.tsx`, `BookDetail.tsx`, `ErrorPage404.tsx`, `ErrorPage500.tsx`
-  - `Header.tsx`, `Footer.tsx`, `BookCard.tsx`
+  - `Home.tsx`,  `BookDetail.tsx`, `ErrorPage404.tsx`, `ErrorPage500.tsx`
+  - `Header.tsx`, `Footer.tsx`, `ProfileDropdown.tsx`
 - **컴포넌트별 기능**:
-  - `BookList.tsx`: 카테고리 필터, 검색 바, 도서 리스트
+  - `Home.tsx`: 최신 리뷰 섹션, 인기 도서 섹션, 검색 바, 카테고리 필터, 도서 리스트
   - `BookDetail.tsx`: 도서 정보, 리뷰 리스트, 리뷰 작성 폼
   - `Header.tsx`: 상단 네비게이션 바, 로그인 상태 표시, 주요 페이지 링크 제공
   - `ErrorPage404`: 404 Not Found, 사용자가 존재하지 않는 페이지를 요청했을 때 보여주는 페이지
   - `ErrorPage500.tsx`: 500 Internal Server Error, 서버에서 예기치 않은 오류가 발생했을 때 사용자에게 알리는 페이지
   - `Footer.tsx`: 하단 정보 표시, 회사 정보 및 소셜 미디어 링크 제공
-  - `BookCard.tsx`: 도서 카드 컴포넌트, 도서 제목, 저자, 평점 등 간단한 정보 표시
-- **개발 우선 순위**
- 1. `Header.tsx` - 1일
- 2. `Footer.tsx` - 1일
- 3. `BookCard.tsx` - 2일
- 4. `BookList.tsx`- 2일
- 5. `BookDetail.tsx` - 2일
- 6. `ErrorPage404.tsx` - 1일
- 7. `ErrorPage500.tsx` - 1일
+  - `ProfileDropdown.tsx`: 사용자가 프로필, 마이리스트, 로그아웃 옵션을 드롭다운 메뉴를 통해 접근할 수 있는 모달
+- **맡은 페이지 반응형 디자인 구현**
 
 
 #### 두 번째 프론트엔드 개발자
 - **구현해야 하는 페이지 및 컴포넌트**:
-  - `Notifications.tsx`
-  - `LatestReviews.tsx`, `PopularBooks.tsx`
-- **알림 기능 구현**:
-  - 사용자가 작성한 리뷰에 좋아요, 댓글 알림 UI, 새로운 도서 추가 알림
-- **리뷰 작성 및 관리 페이지 구현**:
-  - 리뷰 작성 폼 (평점 및 내용), 리뷰 수정 및 삭제 기능 (작성자 본인만)
+  - `SearchList.tsx`, `AdminBookForm`
+  - `SearchBar.tsx`, `CategoryFilter.tsx`
 - **타입 정의 및 코드 안정성 확보**
 - **컴포넌트별 기능**:
-  - `Home.tsx`: 최신 리뷰 섹션, 인기 도서 섹션, 검색 바, 카테고리 필터, 도서 리스트
-  - `Notifications.tsx`: 도서 추가, 리뷰에 대한 좋아요/댓글 알림 표시
-  - `LatestReviews.tsx`: 최신 리뷰 섹션, 슬라이드 형식으로 최근 리뷰 표시
-  - `PopularBooks.tsx`: 인기 도서 섹션, 슬라이드 형식으로 인기 도서 표시
-- **개발 우선 순위**
- 1. `Home.tsx` - 2일
- 2. ``Notifications.tsx`` - 2일
- 3. ``LatestReviews.tsx`` - 2일
- 4. ``PopularBooks.tsx`` - 2일
+- `SearchList.tsx`: 사용자가 입력한 검색어에 기반하여 도서 리스트를 보여줌
+- `AdminBookForm.tsx`: 관리자가 새로운 도서를 추가하거나 이미 등록된 도서를 수정할 수 있는 페이지
+- `SearchBar.tsx`: 사용자가 검색어를 입력하고 검색 버튼을 누르면 검색을 수행 -> SearchList 페이지로 이동
+- `CategoryFilter`: 사용자가 특정 카테고리를 선택하여 검색 결과를 필터링 할 수 있게 해줌(SearchBar, SearchList에서 사용 )
+- **맡은 페이지 반응형 디자인 구현**
 
-#### 세 번째 프론트엔드 개발자
+
+#### 진영
 - **구현해야 하는 페이지 및 컴포넌트**:
   - `Signup.tsx`, `Login.tsx`, `Profile.tsx`, `Favorites.tsx`
-  - `SearchBar.tsx`, `CategoryFilter.tsx`
+  - `Notifications.tsx`, `ReviewForm.tsx`
 - **Styled-Components를 사용한 전체적인 스타일링 및 컴포넌트별 스타일 정의**
-- **반응형 디자인 구현**:
-  - 모바일: 375px 미만
-  - 태블릿: 768px 미만
-  - 데스크탑: 1024px 이상
+
 - **사용자 관리 관련 페이지 구현**:
   - 회원가입, 로그인, 소셜 로그인, 프로필 수정 등
 - **컴포넌트별 기능**:
@@ -68,20 +51,13 @@
   - `Login.tsx`: 이메일과 비밀번호로 로그인, 소셜 로그인 버튼 포함
   - `Profile.tsx`: 사용자 정보 보기 및 수정 기능 포함
   - `Favorites.tsx`: 즐겨찾기에 추가한 도서 및 리뷰 목록 표시
-  - `SearchBar.tsx`: 도서 검색 기능, 입력 필드 및 검색 버튼 포함
-  - `CategoryFilter.tsx`: 도서 카테고리 필터링 기능, 선택된 카테고리에 따라 도서 목록 갱신
-**개발 우선 순위**
- 1. ``SearchBar.tsx`` - 1일
- 2. ``CategoryFilter.tsx`` - 1일
- 3. ``Signup.tsx`` - 2일
- 4. ``Login.tsx``- 1일
- 5. ``Profile.tsx`` - 1일
- 6. ``Favorites.tsx`` - 1일
-
+  - `Notifications.tsx`: 도서 추가, 리뷰에 대한 좋아요/댓글 알림 표시
+  - `ReviewForm`: 사용자가 도서의 리뷰를 남길수 있는 폼
+- **맡은 페이지 반응형 디자인 구현**
 
 ### 백엔드 개발자 (4명)
 
-#### 백엔드 민호님
+#### 민호
 - 사용자 인증 및 권한 관리: 회원가입 API (이메일, 비밀번호, 닉네임 유효성 검사), 로그인 API
 - 사용자 프로필 API 구현: 사용자 정보 조회 API, 사용자 정보 수정 API (닉네임 및 프로필 수정)
 - 소셜 로그인 API 구현: 구글, 페이스북 등
@@ -113,7 +89,7 @@
   - 리뷰 좋아요/댓글,새로운 도서 추가 알림 API - 2일
 
 
-#### 백엔드 개발자 4
+#### 정민
 - 데이터베이스 설계 및 관리: 사용자, 도서, 리뷰, 알림 등 주요 데이터베이스 테이블 설계, 데이터베이스 관리
 - 관리자 API 구현: 도서 및 리뷰 관리 API(도서 추가 & 수정), 도서 삭제 API (관리자 권한 필요), 리뷰 삭제 API(모든 리뷰 삭제 가능)
 
