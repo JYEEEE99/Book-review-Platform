@@ -13,7 +13,7 @@
 #### 재혁
 - **구현해야 하는 페이지 및 컴포넌트**:
   - `Home.tsx`,  `BookDetail.tsx`, `ErrorPage404.tsx`, `ErrorPage500.tsx`
-  - `Header.tsx`, `Footer.tsx`, `ProfileDropdown.tsx`
+  - `Header.tsx`, `Footer.tsx`, `ReviewForm.tsx`
 - **컴포넌트별 기능**:
   - `Home.tsx`: 최신 리뷰 섹션, 인기 도서 섹션, 검색 바, 카테고리 필터, 도서 리스트
   - `BookDetail.tsx`: 도서 정보, 리뷰 리스트, 리뷰 작성 폼
@@ -21,7 +21,9 @@
   - `ErrorPage404`: 404 Not Found, 사용자가 존재하지 않는 페이지를 요청했을 때 보여주는 페이지
   - `ErrorPage500.tsx`: 500 Internal Server Error, 서버에서 예기치 않은 오류가 발생했을 때 사용자에게 알리는 페이지
   - `Footer.tsx`: 하단 정보 표시, 회사 정보 및 소셜 미디어 링크 제공
-  - `ProfileDropdown.tsx`: 사용자가 프로필, 마이리스트, 로그아웃 옵션을 드롭다운 메뉴를 통해 접근할 수 있는 모달
+  - `ReviewForm`: 사용자가 도서의 리뷰를 남길수 있는 폼
+
+  
 - **맡은 페이지 반응형 디자인 구현**
 
 
@@ -41,7 +43,7 @@
 #### 진영
 - **구현해야 하는 페이지 및 컴포넌트**:
   - `Signup.tsx`, `Login.tsx`, `Profile.tsx`, `Favorites.tsx`
-  - `Notifications.tsx`, `ReviewForm.tsx`
+  - `Notifications.tsx`, `ProfileDropdown.tsx`
 - **Styled-Components를 사용한 전체적인 스타일링 및 컴포넌트별 스타일 정의**
 
 - **사용자 관리 관련 페이지 구현**:
@@ -52,7 +54,7 @@
   - `Profile.tsx`: 사용자 정보 보기 및 수정 기능 포함
   - `Favorites.tsx`: 즐겨찾기에 추가한 도서 및 리뷰 목록 표시
   - `Notifications.tsx`: 도서 추가, 리뷰에 대한 좋아요/댓글 알림 표시
-  - `ReviewForm`: 사용자가 도서의 리뷰를 남길수 있는 폼
+  - `ProfileDropdown.tsx`: 사용자가 프로필, 마이리스트, 로그아웃 옵션을 드롭다운 메뉴를 통해 접근할 수 있는 모달
 - **맡은 페이지 반응형 디자인 구현**
 
 ### 백엔드 개발자 (4명)
